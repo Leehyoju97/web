@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Career</title>
+
+    <!-- one-true 레이아웃 -->
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0; padding: 0;
+        }
+        
+        /* 중앙정렬 레이아웃 */
+        body{
+            margin: 0px auto;
+            width:80%;
+            height:auto;
+        }
+
+        /* header menu title css절대좌표 활용 */
+        #header{
+            height:400px;
+            position:relative;
+            background-image:url('제목.png');
+            border-radius: 0 0 10px 10px;
+        }
+        #menu{
+            position: absolute;
+            left:30%; top:60%;
+            margin-top:10px;
+            margin-bottom:50px;
+        }
+
+        #title{
+            text-align: center;
+            font-size:35px;
+            color: rgb(182, 15, 15);
+            position: absolute;
+            left:30%; top:20%;
+            margin: 50px 0;
+        }
+
+        #menu ul{
+            height:200%;
+            line-height: 200%;
+            background-color: orange;
+            border:1px solid black;
+            list-style-type:none;
+            text-align: center;
+        }
+
+        #menu ul li {
+            display:inline-block;
+            padding:0 20px;
+        }
+
+        a:link{color: green; text-decoration: none;}
+        a:hover{color:red; text-decoration:none;}
+
+        /* 수평정렬 */
+        #middle{
+            overflow: hidden;
+        }
+        #m1_left, #m2_left{
+            width:50%;
+            height:150%;
+            float:left;
+            display:block;
+        }
+
+        #hb, #rb, #tot, #kor{
+            width:100%;
+            height:500px;
+        }
+
+        #m1_right, #m2_right{
+            width:50%;
+            height:100%;
+            float:left;
+            display:block;
+        }
+        /* 반응형 웹 구현 */
+        @media screen and (max-width:1024px){
+            #m1_left, #m2_left, #m1_right, #m2_right{
+                float:none;
+            }
+            #hb, #rb, #tot, #kor{
+                height: 200px;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <!-- 헤더부분 -->
+    <div id="header">
+        <div id="title" style="text-align: center;"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+        <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+        
+        <!-- 자바스크립트, DOM 활용 -->
+        <script>
+            var typing = document.getElementById('title');
+            var typewriter = new Typewriter(typing, {
+                loop: true
+            });
+            typewriter.typeString('이효주 웹페이지')
+            .pauseFor(1200)
+            .deleteAll()
+            .typeString('손흥민에 대해 알아봐요')
+            .pauseFor(1500)
+            .start();
+        </script>
+    
+        <!-- 메뉴-->
+        <div id="menu">
+            <ul>
+                <li>
+                     <a href="Main.html">1. Main</a>
+                </li>
+                <li>
+                    <a href="Profile.html">2. Profile</a>
+               </li>
+               <li>
+                    <a href="career.html">3. Career</a>
+                </li>
+                <li>
+                    <a href="highlight.html">4. Highlight</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        <br><br><h2>손흥민 경력</h2><br><br>
+        <div id="middle">
+            <div id="m1_left">
+                <h3>함부르크</h3>
+                <img src="함부르크손흥민.jpg" alt="함부르크손흥민" id="hb">
+                <br>
+                함부르크 통산 기록:78경기 20골 3도움<br>
+                함부르크 최연소 득점 기록<br>
+                2018년 분데스리가 함부르크 역대 베스트 11 선정<br>
+            </div>
+
+            <div id="m1_right">
+                <h3>레버쿠젠</h3>
+                <img src="레버쿠젠손흥민.jpg" alt="레버쿠젠손흥민" id="rb">
+                <br>
+                레버쿠젠 통산 기록:87경기 29골 10도움<br>
+                프로통산 첫 해트트릭 달성(친정팀 함부르크 상대) <br>
+                챔피언스리그 데뷔<br>
+            </div>
+
+            <div id="m2_left">
+                <h3>토트넘</h3>
+                <img src="토트넘손흥민.jpg" alt="토트넘손흥민" id="tot">
+                <br>
+                토트넘 통산 기록: 275경기 105골 61도움<br>
+                챔피언스리그결승 진출<br>
+                푸스카스상 수상(2019-2020)<br>
+            </div>
+
+            <div id="m2_right">
+                <h3>국가대표</h3>
+                <img src="국가대표손흥민.jpg" alt="국가대표 손흥민" id="kor">
+                <br>
+                2015 아시아 선수권 대회 준우승<br>
+                2018 아시안 게임 금메달<br>
+                2008 u-16 아시아 주니어 선수권 준우승<br>
+            </div>
+        </div>
+
+</body>
+</html>

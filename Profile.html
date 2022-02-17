@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Profile</title>
+
+    <!-- one-true 레이아웃 -->
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0; padding: 0;
+        }
+        
+        /* 중앙정렬 레이아웃 */
+        body{
+            margin: 0px auto;
+            width:80%;
+        }
+
+        /* header menu title css절대좌표 활용 */
+        #header{
+            height:400px;
+            position:relative;
+            background-image:url('제목.png');
+            border-radius: 0 0 10px 10px;
+        }
+        #menu{
+            position: absolute;
+            left:30%; top:60%;
+            margin-top:10px;
+            margin-bottom:50px;
+        }
+
+        #title{
+            text-align: center;
+            font-size:35px;
+            color: rgb(182, 15, 15);
+            position: absolute;
+            left:30%; top:20%;
+            margin: 50px 0;
+        }
+
+        #menu ul{
+            height:200%;
+            line-height: 200%;
+            background-color: orange;
+            border:1px solid black;
+            list-style-type:none;
+            text-align: center;
+        }
+
+        #menu ul li {
+            display:inline-block;
+            padding:0 20px;
+        }
+
+        a:link{color: green; text-decoration: none;}
+        a:hover{color:red; text-decoration:none;}
+
+        /* 수평정렬 */
+        #top{
+            overflow: hidden;
+        }
+        #top_left{
+            width:70%;
+            height:150%;
+            float:left;
+            display:block;
+        }
+
+        #profile{
+            width:100%;
+            height:100%;
+        }
+
+        #top_right{
+            width:30%;
+            height:100%;
+            float:left;
+            display:block;
+        }
+
+        /* 반응형 웹 구현 */
+        @media screen and (max-width:1024px){
+            #top_right{
+                float:none;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <!-- 헤더부분 -->
+    <div id="header">
+        <div id="title" style="text-align: center;"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+        <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+        
+        <!-- 자바스크립트, DOM 활용 -->
+        <script>
+            var typing = document.getElementById('title');
+            var typewriter = new Typewriter(typing, {
+                loop: true
+            });
+            typewriter.typeString('이효주 웹페이지')
+            .pauseFor(1200)
+            .deleteAll()
+            .typeString('손흥민에 대해 알아봐요')
+            .pauseFor(1500)
+            .start();
+        </script>
+    
+        <!-- 메뉴-->
+        <div id="menu">
+            <ul>
+                <li>
+                     <a href="Main.html">1. Main</a>
+                </li>
+                <li>
+                    <a href="Profile.html">2. Profile</a>
+               </li>
+               <li>
+                    <a href="career.html">3. Career</a>
+                </li>
+                <li>
+                    <a href="highlight.html">4. Highlight</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+    <div id="top">
+        <br><br><h2>손흥민 프로필</h2><br><br>
+        <div id="top_left">
+            <img src="손흥민.jpg" alt="손흥민" id="profile">
+        </div>
+    
+        <div id="top_right">
+
+            출생: 1992년 7월 8일<br>
+            국적: 대한민국<br>
+            포지션: 윙어, 세컨드 스트라이커<br>
+            소속팀: 토트넘 홋스퍼 FC<br>
+            대회기록: <br>
+            UEFA 챔피언스 리그 준우승(2018-2019)<br>
+            AFC 아시안컵 준우승: 2015<br>
+            아시안 게임 금메달: 2018<br>
+            개인 수상 기록:<br>
+            FIFA 푸스카스상(2020)<br>
+            FA컵 득점왕(2016-2017)<br>
+            아시안게임 도움왕(2018)<br>
+            프리미어 리그 올해의 골(2020)<br>
+            프리미어 리그 이달의 선수(2016년 9월, 2017년 4월, 2020년 10월) 3회 수상<br>
+            프로 통산 기록: 439경기 154득점 74도움
+        </div>
+    </div>
+</body>
+</html>

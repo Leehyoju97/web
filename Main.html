@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+     
+    <title>Main</title>
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0; padding: 0;
+        }
+        
+        /* 중앙정렬 레이아웃 */
+        body{
+            margin: 0px auto;
+            width:80%;
+            height:auto;
+        }
+
+        /* header menu title css절대좌표 활용 */
+        #header{
+            height:400px;
+            position:relative;
+            background-image:url('제목.png');
+            border-radius: 0 0 10px 10px;
+        }
+        #menu{
+            position: absolute;
+            left:30%; top:60%;
+            margin-top:10px;
+            margin-bottom:50px;
+        }
+
+        #title{
+            text-align: center;
+            font-size:35px;
+            color: rgb(182, 15, 15);
+            position: absolute;
+            left:30%; top:20%;
+            margin: 50px 0;
+        }
+
+        #menu ul{
+            height:200%;
+            line-height: 200%;
+            background-color: orange;
+            border:1px solid black;
+            list-style-type:none;
+            text-align: center;
+        }
+
+        #menu ul li {
+            display:inline-block;
+            padding:0 20px;
+        }
+
+        a:link{color: green; text-decoration: none;}
+        a:hover{color:red; text-decoration:none;}
+
+        #intro{
+            border:1px solid green;
+            display:inline-block;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <!-- 헤더부분 -->
+    <div id="header">
+        <div id="title" style="text-align: center;"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+        
+        <!-- 자바스크립트, DOM 활용 -->
+        <script>
+            var typing = document.getElementById('title');
+            var typewriter = new Typewriter(typing, {
+                loop: true
+            });
+            typewriter.typeString('이효주 웹페이지')
+            .pauseFor(1200)
+            .deleteAll()
+            .typeString('손흥민에 대해 알아봐요')
+            .pauseFor(1500)
+            .start();
+        </script>
+    
+        <!-- 메뉴-->
+        <div id="menu">
+            <ul>
+                <li>
+                     <a href="Main.html">1. Main</a>
+                </li>
+                <li>
+                    <a href="Profile.html">2. Profile</a>
+               </li>
+               <li>
+                    <a href="career.html">3. Career</a>
+                </li>
+                <li>
+                    <a href="highlight.html">4. Highlight</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+        <br><br><h2>자기소개 및 주제선정이유</h2><br><br>
+
+    <div id="intro">
+        
+        안녕하세요 컴퓨터공학부 이효주라고 합니다.<br>
+        저는 축구를 상당히 좋아하는데요<br>
+        특히 epl, 라리가, 분데스리가 등 해외축구를 좋아합니다.<br>
+        현재 대한민국에서 제일 잘하는 축구선수 손흥민 선수에 대한 웹페이지를 만들어봤습니다.<br>
+    </div>
+
+</body>
+</html>
